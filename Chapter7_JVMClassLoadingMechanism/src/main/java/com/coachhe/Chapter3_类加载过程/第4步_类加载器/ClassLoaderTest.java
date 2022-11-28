@@ -15,7 +15,8 @@ public class ClassLoaderTest {
             @Override
             public Class<?> loadClass(String name) throws ClassNotFoundException {
                 try {
-                    String fileName = name.substring(name.lastIndexOf(".") + 1) + ".class";
+//                    String fileName = name.substring(name.lastIndexOf(".") + 1) + ".class";
+                    String fileName = "hello.class";
                     InputStream is = getClass().getResourceAsStream(fileName);
                     if (is == null) {
                         return super.loadClass(name);
